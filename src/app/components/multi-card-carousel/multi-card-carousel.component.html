@@ -1,0 +1,25 @@
+<div class="slider-container" #sliderContainer>
+  <div class="slider" [style.transform]="'translateX(' + (-currentIndex * (cardWidth + spaceBetween)) + 'px)'">
+    @for(card of cards; track card){
+      <div class="card" [style.width.px]="cardWidth" [style.marginRight.px]="spaceBetween">
+        <img [src]="card.imageUrl" alt="{{card.title}}" class="card-image"/>
+        <a class="card-text" routerLink="/{{card.redirectTo}}">
+          <h3>{{ card.title }} <i class="pi pi-arrow-up-right ms-1"></i></h3>
+        </a>
+      </div>
+    }
+  </div>
+
+
+  <button type="button" class="prev-btn" (click)="prevSlide()"><i class="pi pi-arrow-left"></i></button>
+  <button type="button" class="next-btn" (click)="nextSlide()"><i class="pi pi-arrow-right"></i></button>
+
+
+  <div class="indicators">
+    <span *ngFor="let indicator of getIndicators()" 
+          [class.active]="indicator === currentIndex" 
+          (click)="goToSlide(indicator)">
+      &#8226;
+    </span>
+  </div>
+</div>

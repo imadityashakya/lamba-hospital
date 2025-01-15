@@ -1,0 +1,43 @@
+<!-- navbar.component.html -->
+<nav class="navbar ">
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo" />
+    </div>
+    <ul class="nav-links" [ngClass]="{'menu-active': isMenuActive}">
+      <div class="wrapper">
+        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+        <li><a >About Us</a></li>
+        <li class="dropdown">
+            <a >Services <i class="pi pi-chevron-down arrow"></i></a>
+            <ul class="dropdown-content">
+                <li><a href="#">Orthopedics </a></li>
+                <li><a href="#">Ophthalmology </a></li>
+                <li><a href="#">Neuropsychiatry </a></li>
+                <li><a href="#">General Surgery </a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a >Additional Services <i class="pi pi-chevron-down arrow"></i></a>
+            <ul class="dropdown-content">
+                <li><a href="#">24x7 Pharmacy </a></li>
+                <li><a href="#">Advanced ICU </a></li>
+                <li><a href="#">Rehabilitation Center </a></li>
+                <li><a href="#">Digital X-ray and EEG Facilities </a></li>
+            </ul>
+        </li>
+        <li><a routerLink="/contact-us" routerLinkActive="active">Contact Us</a></li>
+        <li><a href="#">Blogs</a></li>
+      </div>
+      <div class="cta-section">
+            <button type="button" class="btn-main">Make an Appointment  <i class="pi pi-arrow-up-right"></i></button>
+      </div>
+    </ul>
+    <div class="hamburger-menu">
+      <div class="hamburger" id="hamburger" (click)="toggleMenu()" [ngClass]="{'is-active': isMenuActive}">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+  </nav>
+  

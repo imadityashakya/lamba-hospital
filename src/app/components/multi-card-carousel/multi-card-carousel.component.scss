@@ -1,0 +1,131 @@
+/* Container for the slider */
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Hide overflowing cards */
+  padding-top: 10px;
+  padding-bottom: 80px;
+  // background-color: green;
+}
+
+/* Slider itself (holds all the cards) */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
+}
+
+/* Styling each card */
+.card {
+  flex-shrink: 0;  /* Prevent cards from shrinking */
+  text-align: center;
+  border-radius: 10px;
+  background-color: var(--light-color);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.card-image {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 4/5;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 20%;
+}
+.card-text{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  // backdrop-filter: blur(10px) saturate(180%);
+  // -webkit-backdrop-filter: blur(10px) saturate(180%);
+  // background-color: rgba(17, 25, 40, 0.43);
+  // border-top: 2px solid rgba(255, 255, 255, 0.125);
+  background-color: var(--primary-color);
+  border-top: 3px solid var(--primary-color);
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+  transition: all ease-in 0.2s;
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  color: var(--light-color);
+  transition: all ease-in 0.2s;
+  i{
+    visibility: hidden;
+    color: var(--secondary-color);
+    transition: all ease-in 0.1s;
+    font-weight: 700;
+  }
+}
+.card-text:hover{
+  border-top: 3px solid var(--secondary-color);
+}
+.card-text:hover h3{
+  scale: 1.05;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+.card-text:hover i{
+  visibility: visible;
+}
+
+/* Navigation buttons */
+button {
+  position: absolute;
+  bottom: 0%;
+  transform: translateY(-50%);
+  background-color:var(--primary-color);
+  color: var(--light-color);
+  border: 2px solid var(--primary-color);
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 16px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  transition: all ease-in 0.2s;
+  &:hover{
+    background-color: var(--light-color);
+    color: var(--primary-color);
+  }
+  &:active{
+    scale: 1.1;
+  }
+}
+
+.prev-btn {
+  left: 10px;
+}
+.next-btn {
+  right: 10px;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Indicators */
+.indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.indicators span {
+  font-size: 20px;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.indicators span.active {
+  color: var(--secondary-color); /* Active indicator color */
+  scale: 2;
+}

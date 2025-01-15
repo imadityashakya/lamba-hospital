@@ -1,0 +1,87 @@
+footer{
+    background-image: url('/images/footer-bg.jpg');
+    width: 100%;
+    // min-height: 40vh;
+    background-size: cover;
+    padding: 50px 100px;
+    .wrapper{
+        display: flex;
+        gap: 50px;
+    }
+    .column{
+        width: calc(100% / 4);
+    }
+    ul{
+        list-style-type: none;
+    }
+    h5{
+        color: var(--light-color);
+        font-weight: 600;
+        span{
+            color: var(--primary-color);
+        }
+    }
+    h5::after {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 1.5px;
+        background-color: var(--primary-color); /* You can change the color */
+        margin-top: 5px; /* Adjust space between text and line */
+      }
+    .links{
+        padding: 0;
+        li{
+            margin-top: 5px;
+        }
+        a{
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--link-color);
+            display: inline-block;
+            transition: all ease 0.3s;
+            i{
+                font-size: 12px;
+                color: var(--light-color);
+            }
+        }
+        a:hover{
+            color: var(--primary-color);
+            cursor: pointer;
+            transform: translateX(4px);
+        }
+    }
+
+    .first{
+        p{
+            font-size: 14px;
+            color: var(--link-color);
+            margin-top: 10px;
+        }
+        .socials{
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            margin-top: 20px;
+            a{
+                color: var(--primary-color);
+                border: 2px solid var(--primary-color);
+                border-radius: 4px;
+                padding: 3px 6px 1px 6px;
+                transform: none;
+                transition: all ease 0.3s;
+                display: inline-block;
+            }
+            a:hover{
+                color: var(--light-color);
+                border: 2px solid var(--light-color);
+                transform: translateY(-3px) scale(1.1);
+            }
+        }
+    }
+    .second{
+
+    }
+} 
