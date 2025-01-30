@@ -1,0 +1,179 @@
+.sub-title{
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 20px;
+    img{
+        margin-right: 5px;
+    }
+}
+.sub-head{
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+.legacy{
+    padding: 50px 150px;
+    .content-img{
+        padding-inline: 50px;
+        img{
+            width: 100%;
+            border-radius: 20px;
+        }
+    }
+    .content{
+        padding-inline: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p{
+            font-size: 17px;
+            color: var(--text-color);
+            font-weight: 500;
+            line-height: 1.8;
+            text-align: center;
+            span{
+                color: var(--primary-color);
+            }
+        }
+    }
+}
+.values{
+    background: url('/images/contact-bg.jpg');
+    background-attachment: fixed;
+    margin-top: 50px;
+    padding: 50px 150px;
+    .sub-head{
+        margin-bottom: 70px;
+    }
+    .valueCard{
+        position: relative;
+        background-color: var(--light-color);
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+        padding-inline: 25px;
+        padding-bottom: 10px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all ease 0.3s;
+        .icon{
+            position: absolute;
+            top: -30px;
+            left: 30px;
+            background-color: var(--primary-color);
+            padding: 10px;
+            border-radius: 20px;
+            width: 50px;
+            height: 50px;
+            transition: all ease 0.5s;
+        }
+        .title{
+            padding-top: 30px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            transition: all ease 0.3s;
+        }
+        p{
+            font-size: 14px;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+    }
+    .valueCard:hover{
+        cursor: pointer;
+        .title{
+            transform: translateX(5px) scale(1.05);
+        }
+        .icon{
+            transform: translateX(5px) scale(1.1);
+        }
+    }
+}
+.team{
+    padding: 100px 150px;
+    .team-card{
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        .member-image{
+            width: 100%;
+            aspect-ratio: 4/5;
+            border-radius: 20px;
+        }
+        .info{
+            position: absolute;
+            bottom: 0px;
+            margin: 8px;
+            width: calc(100% - 16px);
+            z-index: 11;
+            background-color: var(--light-color);
+            padding: 8px 5px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+            transition: all ease 0.3s;
+            .title{
+                font-size: 16px;
+                font-weight: 700;
+                color: var(--secondary-color);
+                text-align: center;
+                transition: transform ease 0.4s;
+            }
+            .position{
+                font-size: 12px;
+                font-weight: 600;
+                margin: 0;
+                color: var(--text-color);
+                text-align: center;
+            }
+        }
+        .socials{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: 5px;
+            border-radius: 10px;
+            background-color: var(--light-color);
+            transition: all ease 0.5s;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            a{
+                color: var(--primary-color);
+                text-decoration: none;
+                transition: ease-in 0.3s;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    .supportStaff{
+        .info{
+            .title{
+                font-size: 13px;
+                margin-bottom: 2px;
+            }
+            .position{
+                font-size: 12px;
+            }
+        }
+    }
+    .team-card:hover{
+        cursor: pointer;
+        .info{
+            background-color: var(--primary-color);
+            .title{
+                color: var(--light-color);
+                transform: scale(1.05);                
+            }
+            .position{
+                color: var(--light-color);
+            }
+        }
+        .socials{
+            display: flex;
+        }
+    }
+}

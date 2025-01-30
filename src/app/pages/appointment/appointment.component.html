@@ -1,0 +1,58 @@
+<div class="container-fluid">
+    <div class="row appointment">
+        <div class="col-md-12 wrapper">
+            <div class="col-md-12">
+                <div class="sub-title text-center"><img src="/images/icons/sub-title.png" alt=""> Book an Appointment</div>
+                <h5 class="sub-head text-center mb-5">Consult with our doctors</h5>
+            </div>
+            <form >
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="col-md-12 mb-4">
+                            <p-floatlabel variant="on">
+                                <input pInputText id="name" class="w-100"  autocomplete="off" />
+                                <label for="name">Full Name</label>
+                            </p-floatlabel>
+                        </div>
+                        <div class="col-md-12 mb-4">
+                            <p-floatlabel variant="on">
+                                <input pInputText id="email" class="w-100"  autocomplete="off" />
+                                <label for="email">Email (Optional)</label>
+                            </p-floatlabel>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="col-md-12 mb-4 d-flex gap-2">
+                            <p-floatlabel variant="on">
+                                <p-datepicker inputId="date" showButtonBar="true" [minDate]="today" dateFormat="dd/mm/yy" class="w-100"/>
+                                <label for="date">Date</label>
+                            </p-floatlabel>
+                            <p-floatlabel variant="on">
+                                <p-datepicker inputId="time" class="w-100" [timeOnly]="true" hourFormat="12" />
+                                <label for="time">Time</label>
+                            </p-floatlabel>
+                        </div>
+                        <div class="col-md-12 mb-4">
+                            <p-floatlabel variant="on">
+                                <input pInputText maxlength="10" id="phone" pKeyFilter="int" class="w-100" />
+                                <label for="phone">Phone Number</label>
+                            </p-floatlabel>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-4">
+                        <p-select inputId="department" [options]="department" [showClear]="true" placeholder="Select department" class="w-100" />
+                    </div>
+                    <div class="col-md-12">
+                        <p-floatlabel variant="on">
+                            <textarea pTextarea id="message" rows="5" cols="30" class="w-100"></textarea>
+                            <label for="message">Message</label>
+                        </p-floatlabel>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button class="submit-btn" type="submit">Book Appointment <i class="pi pi-chevron-right"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

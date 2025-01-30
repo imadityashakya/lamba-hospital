@@ -1,6 +1,12 @@
 {
   "routes": [
+    "/about-us",
+    "/additional-services",
+    "/appointment",
+    "/blog-detail",
+    "/blogs",
     "/contact-us",
-    "/home"
+    "/home",
+    "/services/orthopedics"
   ]
 }

@@ -1,6 +1,30 @@
 <div class="container-fluid hero">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-pause="false" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img src="/images/home-slider1.png" alt="slider1.png">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="/images/home-slider2.png" alt="slider2.png">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="/images/home-slider3.png" alt="slider3.png">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="/images/home-slider4.png" alt="slider4.png">
+          </div>
+        </div>
+        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button> -->
+    </div>
     <div class="row">
-        <div class="col-md-8 content">
+        <!-- <div class="col-md-8 content">
             <p class="highlight">24/7 EMERGENCY SERVICE</p>
             <h1 class="tagline">Caring For Generations, <br> Advancing Healthcare.</h1>
             <p class="welcomeMessage">
@@ -13,7 +37,7 @@
                    we strive to make every patient's experience positive and transformative.
             </p>
             <button class="btn-main">Explore Our Services <i class="pi pi-arrow-up-right"></i></button>
-        </div>
+        </div> -->
     </div>
 </div>
 
@@ -23,7 +47,7 @@
             <div class="sub-title text-center"><img src="/images/icons/sub-title.png" alt=""> Why Choose Us</div>
             <h5 class="text-center mb-4">We Are Always Open For Health Services</h5>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 mb-4">
             <div class="col wrapper">
                 <img src="/images/icons/dental-chair.png" alt="">
                 <div class="innerWrapper">
@@ -32,7 +56,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 mb-4">
             <div class="col wrapper">
                 <img src="/images/icons/doctor.png" alt="">
                 <div class="innerWrapper">
@@ -41,16 +65,16 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 mb-4">
             <div class="col wrapper">
                 <img src="/images/icons/24-hours.png" alt="">
                 <div class="innerWrapper">
                     <h6>24/7 Services</h6>
-                    <p>Round-the-clock emergency care, pharmacy, and ICU services. <br> &nbsp;</p>
+                    <p>Round-the-clock emergency care, pharmacy, and ICU services.</p>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 mb-4">
             <div class="col wrapper">
                 <img src="/images/icons/patient.png" alt="">
                 <div class="innerWrapper">
@@ -69,8 +93,7 @@
             <h5 class="text-center mb-4">Explore Our Services</h5>
         </div>
         <div class="col-md-12">
-            <app-multi-card-carousel [cards]="cards" [cardsToShow]="3" [spaceBetween]="15"></app-multi-card-carousel>
-
+            <app-multi-card-carousel [cards]="cards" [cardsToShow]="4" [spaceBetween]="15"></app-multi-card-carousel>
         </div>
     </div>
 </div>

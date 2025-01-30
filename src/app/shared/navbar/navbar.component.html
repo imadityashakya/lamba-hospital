@@ -1,35 +1,37 @@
 <!-- navbar.component.html -->
 <nav class="navbar ">
     <div class="logo">
-      <img src="images/logo.png" alt="Logo" />
+      <a routerLink="/home"><img src="images/logo.png" alt="Logo" /></a>
     </div>
     <ul class="nav-links" [ngClass]="{'menu-active': isMenuActive}">
       <div class="wrapper">
-        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-        <li><a >About Us</a></li>
+        <li class="nav-item"><a routerLink="/home" routerLinkActive="active" class="nav-link">Home</a></li>
+        <li class="nav-item"><a routerLink="/about-us" routerLinkActive="active" class="nav-link">About Us</a></li>
         <li class="dropdown">
-            <a >Services <i class="pi pi-chevron-down arrow"></i></a>
+            <a class="nav-link">Services <i class="pi pi-chevron-down arrow"></i></a>
             <ul class="dropdown-content">
-                <li><a href="#">Orthopedics </a></li>
-                <li><a href="#">Ophthalmology </a></li>
-                <li><a href="#">Neuropsychiatry </a></li>
-                <li><a href="#">General Surgery </a></li>
+                <li class="nav-item"><a routerLink="/services/orthopedics" routerLinkActive="active" class="nav-link">Orthopedics </a></li>
+                <li class="nav-item"><a class="nav-link">Ophthalmology </a></li>
+                <li class="nav-item"><a class="nav-link">Neuropsychiatry </a></li>
+                <li class="nav-item"><a class="nav-link">General Surgery </a></li>
+                <li class="nav-item"><a routerLink="/additional-services" routerLinkActive="active" class="nav-link">Additional Services</a></li>
             </ul>
         </li>
-        <li class="dropdown">
-            <a >Additional Services <i class="pi pi-chevron-down arrow"></i></a>
+        <!-- <li class="dropdown">
+            <a class="nav-link">Additional Services <i class="pi pi-chevron-down arrow"></i></a>
             <ul class="dropdown-content">
-                <li><a href="#">24x7 Pharmacy </a></li>
-                <li><a href="#">Advanced ICU </a></li>
-                <li><a href="#">Rehabilitation Center </a></li>
-                <li><a href="#">Digital X-ray and EEG Facilities </a></li>
+                <li class="nav-item"><a routerLink="/additional-services" routerLinkActive="active" class="nav-link">24x7 Pharmacy </a></li>
+                <li class="nav-item"><a routerLink="/" routerLinkActive="active" class="nav-link">Advanced ICU </a></li>
+                <li class="nav-item"><a routerLink="/" routerLinkActive="active" class="nav-link">Rehabilitation Center </a></li>
+                <li class="nav-item"><a routerLink="/" routerLinkActive="active" class="nav-link">Digital X-ray and EEG Facilities </a></li>
+                
             </ul>
-        </li>
-        <li><a routerLink="/contact-us" routerLinkActive="active">Contact Us</a></li>
-        <li><a href="#">Blogs</a></li>
+        </li> -->
+        <li class="nav-item"><a routerLink="/contact-us" routerLinkActive="active" class="nav-link">Contact Us</a></li>
+        <li class="nav-item"><a routerLink="/blogs" routerLinkActive="active" class="nav-link">Blogs</a></li>
       </div>
       <div class="cta-section">
-            <button type="button" class="btn-main">Make an Appointment  <i class="pi pi-arrow-up-right"></i></button>
+            <button type="button" class="btn-main" routerLink="/appointment">Make an Appointment  <i class="pi pi-arrow-up-right"></i></button>
       </div>
     </ul>
     <div class="hamburger-menu">

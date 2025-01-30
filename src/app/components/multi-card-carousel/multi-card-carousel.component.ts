@@ -1,6 +1,6 @@
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit, ElementRef, ViewChild, AfterViewInit, HostListener } from '@angular/core';
+import { Component, Input, OnInit, AfterViewInit, ViewChild, ElementRef, HostListener, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-multi-card-carousel',
@@ -21,6 +21,8 @@ export class MultiCardCarouselComponent implements OnInit, AfterViewInit {
 
   @ViewChild('sliderContainer', { static: true }) sliderContainer!: ElementRef;
 
+  constructor(private cdr: ChangeDetectorRef) {}
+
   ngOnInit(): void {
     if (typeof window !== 'undefined') {
       this.containerWidth = this.sliderContainer.nativeElement.offsetWidth;
@@ -33,9 +35,11 @@ export class MultiCardCarouselComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+    // Use ChangeDetectorRef to detect changes
     this.containerWidth = this.sliderContainer.nativeElement.offsetWidth;
     this.calculateCardWidth();
     this.calculateTotalSlides();
+    this.cdr.detectChanges(); // Manually trigger change detection after view initialization
   }
 
   // Method to update cardsToShow based on screen width
@@ -44,7 +48,7 @@ export class MultiCardCarouselComponent implements OnInit, AfterViewInit {
       if (window.innerWidth < 700) {
         this.cardsToShow = 1;  // Show 1 card on small screens
       } else {
-        this.cardsToShow = 3;  // Default to 3 cards on larger screens
+        this.cardsToShow;  // Default to 3 cards on larger screens
       }
       this.calculateCardWidth();  // Recalculate card width when cardsToShow changes
       this.calculateTotalSlides(); // Recalculate total slides
@@ -62,7 +66,7 @@ export class MultiCardCarouselComponent implements OnInit, AfterViewInit {
 
   // Calculate the total number of slides (number of groups of cards)
   calculateTotalSlides(): void {
-    this.totalSlides = Math.ceil(this.cards.length / this.cardsToShow);
+    this.totalSlides = Math.ceil(this.cards.length +1 - this.cardsToShow);
   }
 
   // Infinite scrolling: move to the next slide, loop back to the first slide if needed
@@ -83,14 +87,10 @@ export class MultiCardCarouselComponent implements OnInit, AfterViewInit {
   // Get the list of indicators to display (limit to 3 indicators and make them scroll infinitely)
   getIndicators(): number[] {
     const indicators: number[] = [];
-
-    // Calculate the previous, current, and next slide indices
     const prevIndex = (this.currentIndex - 1 + this.totalSlides) % this.totalSlides;
     const nextIndex = (this.currentIndex + 1) % this.totalSlides;
 
-    // Add the previous, current, and next indices as the indicators
     indicators.push(prevIndex, this.currentIndex, nextIndex);
-
     return indicators;
   }
 
