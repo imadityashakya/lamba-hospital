@@ -1,5 +1,5 @@
 .container-fluid{
-    padding-inline: 300px;
+    // padding-inline: 300px;
     width: 100%;
 }
 .sub-title{
@@ -17,14 +17,15 @@
 }
 
 .appointment{
-    padding-top: 50px;
-    padding-bottom: 100px;
+    padding-top: 0px;
+    padding-inline: 300px;
+    padding-bottom: 50px;
     .wrapper{
         margin-top: 10px;
         padding: 50px 80px;
         border-radius: 10px;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        background: url('/images/blog-bg.jpg');
+        background: var(--card-bg-primary);
         background-size: cover;
     }
 

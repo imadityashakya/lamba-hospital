@@ -11,17 +11,20 @@
     align-items: center;
   }
   .navbar .logo{
-    width: 15%;
+    width: 25%;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
   } 
   .navbar .logo img {
-    width: auto;
-    height: 35px;
+    height: 55px;
+    margin-bottom: 8px;
     object-fit: cover;
   }
 
   /* Navigation Links */
   .nav-links {
-    width: 85%;
+    width: 75%;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
@@ -154,7 +157,7 @@
   }
   
   /* Media Queries */
-  @media (max-width: 1050px) {
+  @media (max-width: 1100px) {
     .hamburger-menu{
       
       .hamburger .line{

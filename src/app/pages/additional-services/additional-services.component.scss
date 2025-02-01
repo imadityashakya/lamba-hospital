@@ -52,8 +52,7 @@
     .whyChooseUs{
         h5{
             text-align: center;
-            margin-top: 10px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             font-weight: 700;
             color: var(--secondary-color);
         }
@@ -72,7 +71,35 @@
     }
 }
 
-
+.ATE{
+    background: url('/images/primary-bg.jpg');
+    background-size: cover;
+    padding: 50px 150px;
+    h5{
+        text-align: center;
+        margin-bottom: 25px;
+        font-weight: 700;
+        color: var(--light-color);
+    }
+    .tech-card{
+        background-color: var(--light-color);
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+        height: 100%;
+        h6{
+            color: var(--primary-color);
+            text-align: center;
+        }
+        hr{
+            margin: 5px 0px;
+        }
+        p{
+            color: var(--secondary-color);
+            text-align: center;
+        }
+    }
+}
 
 
 

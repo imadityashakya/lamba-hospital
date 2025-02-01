@@ -30,12 +30,61 @@
             color: var(--text-color);
             font-weight: 500;
             line-height: 1.8;
-            text-align: center;
+            // text-align: center;
             span{
                 color: var(--primary-color);
             }
         }
     }
+}
+.vision{
+    padding: 50px 150px;
+    .content-img{
+        padding-inline: 50px;
+        img{
+            width: 100%;
+            border-radius: 20px;
+        }
+    }
+    .content{
+        padding-inline: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p{
+            font-size: 16px;
+            color: var(--text-color);
+            font-weight: 500;
+            line-height: 1.6;
+            // text-align: center;
+            margin-bottom: 25px;
+            span{
+                color: var(--primary-color);
+            }
+        }
+        .icon-text {
+            display: flex; 
+            flex-wrap: nowrap;
+            align-items: center;
+            background-color: var(--card-bg-primary);
+            padding: 10px;
+            border-radius: 3px;
+            margin-bottom: 10px;
+            .icon i{
+                font-weight: 800;
+                margin-right: 15px;
+                background-color: var(--light-color);
+                color: var(--primary-color);
+                padding: 10px;
+                border-radius: 50%;
+            }
+            .text{
+                font-size: 15px;
+                font-weight: 500;
+                color: var(--secondary-color);
+            }
+        }
+    }      
 }
 .values{
     background: url('/images/contact-bg.jpg');
@@ -91,7 +140,7 @@
     }
 }
 .team{
-    padding: 100px 150px;
+    padding: 50px 150px;
     .team-card{
         position: relative;
         overflow: hidden;
@@ -99,6 +148,7 @@
         .member-image{
             width: 100%;
             aspect-ratio: 4/5;
+            object-fit: cover;
             border-radius: 20px;
         }
         .info{
@@ -150,6 +200,8 @@
         }
     }
     .supportStaff{
+        display: flex;
+        justify-content: center;
         .info{
             .title{
                 font-size: 13px;

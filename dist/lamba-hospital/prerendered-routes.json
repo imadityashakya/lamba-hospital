@@ -7,6 +7,9 @@
     "/blogs",
     "/contact-us",
     "/home",
+    "/services/general-surgery",
+    "/services/neuropsychiatry",
+    "/services/ophthalmology",
     "/services/orthopedics"
   ]
 }

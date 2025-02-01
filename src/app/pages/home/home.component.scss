@@ -1,5 +1,4 @@
 .container-fluid{
-    // padding-inline: 100px;
     width: 100%;
 }
 .sub-title{
@@ -23,7 +22,7 @@
     .carousel{
         img{
             width: 100%;
-            object-fit: cover;
+            object-fit: contain;
         }
     }
     .content{
@@ -130,6 +129,84 @@
         }
     }
 }
+.team{
+    padding: 100px 100px 50px 100px;
+    .team-card{
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        .member-image{
+            width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        .info{
+            position: absolute;
+            bottom: 0px;
+            margin: 8px;
+            width: calc(100% - 16px);
+            z-index: 11;
+            background-color: var(--light-color);
+            padding: 8px 5px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+            transition: all ease 0.3s;
+            .title{
+                font-size: 16px;
+                font-weight: 700;
+                color: var(--secondary-color);
+                text-align: center;
+                transition: transform ease 0.4s;
+            }
+            .position{
+                font-size: 12px;
+                font-weight: 600;
+                margin: 0;
+                color: var(--text-color);
+                text-align: center;
+            }
+        }
+        .socials{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: 5px;
+            border-radius: 10px;
+            background-color: var(--light-color);
+            transition: all ease 0.5s;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            a{
+                color: var(--primary-color);
+                text-decoration: none;
+                transition: ease-in 0.3s;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    .team-card:hover{
+        cursor: pointer;
+        .info{
+            background-color: var(--primary-color);
+            .title{
+                color: var(--light-color);
+                transform: scale(1.05);                
+            }
+            .position{
+                color: var(--light-color);
+            }
+        }
+        .socials{
+            display: flex;
+        }
+    }
+}
+
 .ourTestimonials{
     padding: 100px;
         h5{

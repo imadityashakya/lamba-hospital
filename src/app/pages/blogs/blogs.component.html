@@ -58,5 +58,6 @@
                 <button class="read-more float-end">Read More <i class="pi pi-chevron-right"></i></button>
             </div>
         </div>
+        <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="120" [rowsPerPageOptions]="[10, 20, 30]" />
     </div>
 </div>
