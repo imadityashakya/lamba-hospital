@@ -86,7 +86,37 @@ footer{
             }
         }
     }
-    .second{
-
-    }
 } 
+
+@media (max-width: 1080px) {
+    footer{
+        padding:40px 20px;
+        .wrapper{
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .column{
+            flex: 1 1 calc(50% - 20px);
+        }
+        h5{
+            font-size: 14px;
+        }
+        .links{
+            a{
+                font-size: 12px;
+                i{
+                    font-size: 10px;
+                }
+            }
+        }
+        .first{
+            p{
+                font-size: 12px;
+            }
+            img{
+                width: 50px;
+                height: 50px;
+            }
+        }
+    } 
+}

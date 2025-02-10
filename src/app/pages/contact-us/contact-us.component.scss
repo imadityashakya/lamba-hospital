@@ -31,6 +31,7 @@
     }
     .info{
         margin-top: 30px;
+        padding-left: 50px;
         .icon-box{
             display: flex;
             gap: 25px;
@@ -67,8 +68,39 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
     .banner-img {
       content: url('/images/contactUs-banner-sm.png'); /* Change image for mobile */
+    }
+    .contact-us{
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 50px;
+        padding-inline: 10px;
+        padding-bottom: 50px;
+        .form-wrapper{
+            padding: 40px 20px;
+        }
+        .info{
+            margin-top: 30px;
+            padding-left: 10px;
+            .icon-box{
+                display: flex;
+                gap: 25px;
+                align-items: center;
+                margin-bottom: 15px;
+                i{
+                    padding: 10px;
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+            p{
+                font-size: 13px;
+            }
+            h6{
+                font-size: 15px;
+            }
+        }
     }
 }

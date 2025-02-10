@@ -2,42 +2,30 @@
     <div id="carouselExampleInterval" class="carousel slide" data-bs-pause="false" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="3000">
-            <img src="/images/home-slider1.png" alt="slider1.png">
+            <picture>
+                <source media="(max-width: 767px)" srcset="/images/home-slider1-sm.png">
+                <img src="/images/home-slider1.png" alt="slider1">
+            </picture>
           </div>
           <div class="carousel-item" data-bs-interval="3000">
-            <img src="/images/home-slider2.png" alt="slider2.png">
+            <picture>
+                <source media="(max-width: 767px)" srcset="/images/home-slider2-sm.png">
+                <img src="/images/home-slider2.png" alt="slider2">
+            </picture>
           </div>
           <div class="carousel-item" data-bs-interval="3000">
-            <img src="/images/home-slider3.png" alt="slider3.png">
+            <picture>
+                <source media="(max-width: 767px)" srcset="/images/home-slider3-sm.png">
+                <img src="/images/home-slider3.png" alt="slider3">
+            </picture>
           </div>
           <div class="carousel-item" data-bs-interval="3000">
-            <img src="/images/home-slider4.png" alt="slider4.png">
+            <picture>
+                <source media="(max-width: 767px)" srcset="/images/home-slider4-sm.png">
+                <img src="/images/home-slider4.png" alt="slider4">
+            </picture>
           </div>
         </div>
-        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button> -->
-    </div>
-    <div class="row">
-        <!-- <div class="col-md-8 content">
-            <p class="highlight">24/7 EMERGENCY SERVICE</p>
-            <h1 class="tagline">Caring For Generations, <br> Advancing Healthcare.</h1>
-            <p class="welcomeMessage">
-                Welcome to Lamba Multispeciality Hospital, a trusted name in healthcare since 1986.
-                Situated in the heart of Hisar, Haryana, we have been a beacon of hope for countless
-                patients seeking quality medical care. <br>
-                Our journey began with a focus on psychiatric care and has since grown into a
-                 state-of-the-art facility offering comprehensive healthcare solutions across
-                  multiple specialties. With a commitment to excellence, compassion, and innovation,
-                   we strive to make every patient's experience positive and transformative.
-            </p>
-            <button class="btn-main">Explore Our Services <i class="pi pi-arrow-up-right"></i></button>
-        </div> -->
     </div>
 </div>
 
@@ -45,7 +33,7 @@
     <div class="row whyChooseUs">
         <div class="col-md-12">
             <div class="sub-title text-center"><img src="/images/icons/sub-title.png" alt=""> Why Choose Us</div>
-            <h5 class="text-center mb-4">We Are Always Open For Health Services</h5>
+            <h5 class="sub-head text-center mb-4">We Are Always Open For Health Services</h5>
         </div>
         <div class="col-md-6 mb-4">
             <div class="col wrapper">
@@ -90,7 +78,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="sub-title text-center"><img src="/images/icons/sub-title.png" alt=""> Our Services</div>
-            <h5 class="text-center mb-4">Explore Our Services</h5>
+            <h5 class="sub-head text-center mb-4">Explore Our Services</h5>
         </div>
         <div class="col-md-12">
             <app-multi-card-carousel [cards]="cards" [cardsToShow]="4" [spaceBetween]="15"></app-multi-card-carousel>
@@ -102,22 +90,8 @@
     <div class="row team">
         <div class="sub-title text-center"><img src="/images/icons/sub-title.png" alt=""> Our Team</div>
         <h5 class="sub-head text-center mb-4">Meet our experts</h5>
-        <div class="row d-flex justify-content-center">
-            <div class="col-md-3">
-                <div class="team-card">
-                    <img src="/images/akshayLamba.jpg" class="member-image" alt="Member's Image">
-                    <div class="info">
-                        <h5 class="title">Dr. Akshay Lamba</h5>
-                        <p class="position">MBBS, MS (Ortho), ECFMG certified(USA)</p>
-                    </div>
-                    <div class="socials">
-                        <a href=""><i class="pi pi-instagram"></i> </a>
-                        <a href=""><i class="pi pi-facebook"></i> </a>
-                        <a href=""><i class="pi pi-linkedin"></i> </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
+        <div class="d-flex justify-content-center gap-2">
+            <div class="col-lg-3 col-6 col-sm-6">
                 <div class="team-card">
                     <img src="/images/rsLamba.jpg" class="member-image" alt="Member's Image">
                     <div class="info">
@@ -131,12 +105,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-lg-3 col-6 col-sm-6">
                 <div class="team-card">
                     <img src="/images/akshayLamba.jpg" class="member-image" alt="Member's Image">
                     <div class="info">
-                        <h5 class="title">Dr. S.B. Jain</h5>
-                        <p class="position">MBBS, MS (Ophthalmology)</p>
+                        <h5 class="title">Dr. Akshay Lamba</h5>
+                        <p class="position">MBBS, MS (Ortho), ECFMG certified(USA)</p>
                     </div>
                     <div class="socials">
                         <a href=""><i class="pi pi-instagram"></i> </a>
@@ -153,32 +127,34 @@
     <div class="row ourTestimonials">
         <div class="col-md-12">
             <div class="sub-title text-center"><img src="/images/icons/sub-title.png" alt=""> Our Testimonials</div>
-            <h5 class="text-center mb-4">What Our Patients Say</h5>
+            <h5 class="sub-head text-center mb-4">What Our Patients Say</h5>
         </div>
-        <div class="col-md-4">
-            <div class="col testimonial-card">
-                <img src="/images/user.png" alt="Patient's Picture" class="userImg">
-                <img src="/images/icons/quote.png" alt="Quote" class="quoteImg">
-                <p class="text-center">"Dr. Akshay Lamba's expertise in joint replacement gave me a new lease on life. The care I received was phenomenal."</p>
-                <h6 class="text-center">- Ramesh Kumar, Hisar</h6>
+        <div class="row d-flex justify-content-center m-0 p-0">
+            <div class="col-lg-4 col-6 col-sm-6 mb-3">
+                <div class="col testimonial-card">
+                    <img src="/images/user.png" alt="Patient's Picture" class="userImg">
+                    <img src="/images/icons/quote.png" alt="Quote" class="quoteImg">
+                    <p class="text-center">"Dr. Akshay Lamba's expertise in joint replacement gave me a new lease on life. The care I received was phenomenal."</p>
+                    <h6 class="text-center">- Ramesh Kumar, Hisar</h6>
+                </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="col testimonial-card">
-                <img src="/images/user.png" alt="Patient's Picture" class="userImg">
-                <img src="/images/icons/quote.png" alt="Quote" class="quoteImg">
-                <p class="text-center">“The de-addiction center changed my brother's life for the better. Eternally grateful to Dr. R.S. Lamba and the team.”</p>
-                <h6 class="text-center">- Priya Sharma, Delhi</h6>
+            <div class="col-lg-4 col-6 col-sm-6 mb-3">
+                <div class="col testimonial-card">
+                    <img src="/images/user.png" alt="Patient's Picture" class="userImg">
+                    <img src="/images/icons/quote.png" alt="Quote" class="quoteImg">
+                    <p class="text-center">“The de-addiction center changed my brother's life for the better. Eternally grateful to Dr. R.S. Lamba and the team.”</p>
+                    <h6 class="text-center">- Priya Sharma, Delhi</h6>
+                </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="col testimonial-card">
-                <img src="/images/user.png" alt="Patient's Picture" class="userImg">
-                <img src="/images/icons/quote.png" alt="Quote" class="quoteImg">
-                <p class="text-center">“Exceptional care and top-notch facilities! Highly recommend Lamba Hospital for all healthcare needs.”</p>
-                <h6 class="text-center">- Anjali Gupta, Haryana</h6>
-            </div>
-        </div>    
+            <div class="col-lg-4 col-6 col-sm-6 mb-3">
+                <div class="col testimonial-card">
+                    <img src="/images/user.png" alt="Patient's Picture" class="userImg">
+                    <img src="/images/icons/quote.png" alt="Quote" class="quoteImg">
+                    <p class="text-center">“Exceptional care and top-notch facilities! Highly recommend Lamba Hospital for all healthcare needs.”</p>
+                    <h6 class="text-center">- Anjali Gupta, Haryana</h6>
+                </div>
+            </div>   
+        </div> 
     </div>
 </div>
 <!-- <div class="container">

@@ -4,7 +4,7 @@
     </div> -->
     <div class="row blogs">
         <div class="sub-title text-center"><img src="/images/icons/sub-title.png" alt=""> Our Blogs</div>
-        <div class="col-md-4 mb-4" >
+        <div class="col-md-4  mb-4" >
             <div class="col blog-card">
                 <img src="/images/general-surgery.jpg" alt=""  routerLink="/blog-detail">
                 <span >07/12/2024</span>
@@ -58,6 +58,6 @@
                 <button class="read-more float-end">Read More <i class="pi pi-chevron-right"></i></button>
             </div>
         </div>
-        <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="120" [rowsPerPageOptions]="[10, 20, 30]" />
+        <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="10" [showCurrentPageReport]="true" [showPageLinks]="false" [showJumpToPageDropdown]="false" />
     </div>
 </div>

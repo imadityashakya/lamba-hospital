@@ -46,7 +46,7 @@ export class MultiCardCarouselComponent implements OnInit, AfterViewInit {
   updateCardsToShowBasedOnScreenSize(): void {
     if (typeof window !== 'undefined') {
       if (window.innerWidth < 700) {
-        this.cardsToShow = 1;  // Show 1 card on small screens
+        this.cardsToShow = 2;  // Show 1 card on small screens
       } else {
         this.cardsToShow;  // Default to 3 cards on larger screens
       }

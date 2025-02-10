@@ -10,6 +10,10 @@
 .sub-head{
     color: var(--secondary-color);
     font-weight: 700;
+    margin-bottom: 40px;
+}
+.sm-image{
+    display: none;
 }
 .legacy{
     padding: 50px 150px;
@@ -200,6 +204,9 @@
         }
     }
     .supportStaff{
+        .col{
+            margin-bottom: 30px;
+        }
         display: flex;
         justify-content: center;
         .info{
@@ -228,4 +235,125 @@
             display: flex;
         }
     }
+}
+
+
+// Responsive for Mobile Devices
+@media (max-width: 1080px){
+    .sub-title{
+        margin-bottom: 10px;
+    }
+    .sub-head{
+        margin-bottom: 20px;
+    }
+    .lg-image{
+        display: none;
+    }
+    .sm-image{
+        display: block;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    .legacy{
+        padding: 20px 10px;
+        .content{
+            padding-inline: 0px;
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+    .vision{
+        padding: 20px 10px;
+        .content{
+            padding-inline: 0px;
+            p{
+                font-size: 14px; 
+                margin-bottom: 15px;
+            }
+            .icon-text {
+                .text{
+                    font-size: 13px;
+                }
+            }
+        }      
+    }
+    .values{
+        padding: 20px 10px;
+        .sub-head{
+            margin-bottom: 50px;
+        }
+        .wrapper{
+            margin-bottom: 40px;
+        }
+        .valueCard{
+            padding-inline: 15px;
+            .icon{
+                border-radius: 15px;
+                width: 45px;
+                height: 45px;
+            }
+            .title{
+                padding-top: 20px;
+            }
+            p{
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .team{
+        padding: 20px 10px;
+        .wrapper{
+            margin-bottom: 20px;
+        }
+        .team-card{
+            .info{
+                padding: 10px 2px;
+                .title{
+                    font-size: 14px;
+                    margin-bottom: 4px;
+                }
+                .position{
+                    font-size: 12px;
+                }
+            }
+            .socials{
+                top: 10px;
+                left: 10px;
+                gap: 3px;
+                padding: 5px;
+                a{
+                    font-size: 10px;
+                }
+            }
+        }
+        
+        
+        .supportStaff{
+            .col{
+                margin-bottom: 5px;
+                padding: 5px;
+            }
+            .info{
+                padding: 3px 2px;
+                .title{
+                    font-size: 12px;
+                    margin-bottom: 4px;
+                }
+                .position{
+                    font-size: 10px;
+                }
+            }
+            .socials{
+                top: 10px;
+                left: 10px;
+                gap: 3px;
+                padding: 5px;
+                a{
+                    font-size: 10px;
+                }
+            }
+        }
+    }  
 }
